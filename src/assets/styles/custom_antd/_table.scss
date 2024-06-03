@@ -1,0 +1,47 @@
+// custom nz-table: scrollbar, border, hover color
+:host ::ng-deep {
+  nz-table.custom-nz-table {
+    // hide shadow left
+    .ant-table-ping-left .ant-table-cell-fix-left-first::after,
+    .ant-table-ping-left .ant-table-cell-fix-left-last::after,
+    .ant-table-ping-left:not(.ant-table-has-fix-left),
+    .ant-table-container::before {
+      box-shadow: none !important;
+    }
+
+    // custom scroll
+    nz-table-inner-scroll {
+      border: 1px solid #F0F0F0;
+      border-radius: 8px;
+      padding-bottom: 4px;
+      overflow: hidden;
+
+      .ant-table-content {
+        padding-bottom: 4px;
+
+        &::-webkit-scrollbar-track {
+          background-color: #FFFFFF;
+          margin-left: 4px;
+          margin-right: 4px;
+        }
+
+        &::-webkit-scrollbar {
+          height: 8px;
+          background-color: #FFFFFF;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 4px;
+          opacity: 0.7;
+          background: #E5E5E5;
+        }
+      }
+    }
+
+    // hover color
+    .ant-table-tbody > tr.ant-table-row:hover > td,
+    .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+      background: #E6F7FF;
+    }
+  }
+}

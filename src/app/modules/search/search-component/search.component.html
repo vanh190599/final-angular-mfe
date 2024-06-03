@@ -1,0 +1,220 @@
+<nz-layout id="search-app">
+  <!-- begin: content -->
+  <nz-content>
+    <!-- begin: form-search-component -->
+    <form nz-form>
+      <nz-card class="card-search" nzTitle="Thông tin tìm kiếm">
+        <nz-row nzGutter="16">
+          <nz-col nzXs="24" nzSm="12" nzMd="12" nzXl="8" nzLg="8">
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzRequired nzFor="note">Loại thanh toán</nz-form-label>
+              <nz-form-control>
+                <nz-radio-group ngModel="NDPO" [ngModelOptions]="{standalone: true}">
+                  <nz-space [nzSize]="25">
+                    <label nz-radio *nzSpaceItem nzValue="NDPO">NDPO</label>
+                    <label nz-radio *nzSpaceItem nzValue="NDPOIN">NDPOIN</label>
+                  </nz-space>
+                </nz-radio-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24">Kênh</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select ngModel="lucy" [ngModelOptions]="{standalone: true}">
+                  <nz-option nzValue="jack" nzLabel="77-Lpay"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số giao dịch kênh</nz-form-label>
+              <nz-form-control>
+                <input nz-input type="text"/>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Ngày tạo</nz-form-label>
+              <nz-form-control>
+                <nz-range-picker
+                  [nzPlaceHolder]="['dd/mm/yyyy', 'dd/mm/yyyy']"
+                  [nzShowTime]="false" nzFormat="dd/MM/yyyy">
+                </nz-range-picker>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24">Ngân hàng gửi</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select ngModel="lucy" [ngModelOptions]="{standalone: true}" nzPlaceHolder="Chọn ngân hàng ">
+                  <nz-option nzValue="jack" nzLabel="77-Lpay"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </nz-col>
+          <nz-col nzXs="24" nzSm="12" nzMd="12" nzXl="8" nzLg="8">
+            <nz-form-item>
+              <nz-form-label nzRequired [nzSpan]="24">Loại điện</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select ngModel="all" [ngModelOptions]="{standalone: true}">
+                  <nz-option nzValue="all" nzLabel="All"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số giao dịch kênh</nz-form-label>
+              <nz-form-control>
+                <input nz-input type="text"/>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số tham chiếu SWIFT</nz-form-label>
+              <nz-form-control>
+                <input nz-input type="text"/>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24">Trạng thái</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select ngModel="1" [ngModelOptions]="{standalone: true}">
+                  <nz-option nzValue="1" nzLabel="A- add"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24">Ngân hàng gửi</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select nzPlaceHolder="Choọn ngân hàng">
+                  <nz-option nzValue="1" nzLabel="A- add"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </nz-col>
+          <nz-col nzXs="24" nzSm="12" nzMd="12" nzXl="8" nzLg="8">
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24">Loại giao dịch</nz-form-label>
+              <nz-form-control [nzSpan]="24">
+                <nz-select ngModel="1" [ngModelOptions]="{standalone: true}" nzPlaceHolder="Choọn ngân hàng">
+                  <nz-option nzValue="1" nzLabel="1 - Giao dịch thông thường"></nz-option>
+                  <nz-option nzValue="lucy" nzLabel="77-Lpay"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số tham chiếu citad</nz-form-label>
+              <nz-form-control>
+                <input nz-input type="text"/>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số UETR</nz-form-label>
+              <nz-form-control>
+                <input nz-input type="text"/>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-label [nzSpan]="24" nzFor="note">Số tiền thanh toán</nz-form-label>
+              <nz-input-group [nzAddOnAfter]="addOnAfterTemplate">
+                <nz-input-number
+                  [(ngModel)]="valueMoney"
+                  [nzFormatter]="formatter"
+                  [ngModelOptions]="{standalone: true}"
+                ></nz-input-number>
+              </nz-input-group>
+              <ng-template #addOnAfterTemplate>
+                <nz-select [ngModel]="'USD'" [ngModelOptions]="{standalone: true}">
+                  <nz-option nzLabel="USD" nzValue="USD"></nz-option>
+                </nz-select>
+              </ng-template>
+            </nz-form-item>
+          </nz-col>
+        </nz-row>
+        <div nz-flex nzJustify="flex-end" nzGap="middle">
+          <button nz-button nzType="default" class="btn" type="reset">
+            <span nz-icon nzType="reload"></span><span>Làm mới</span>
+          </button>
+          <button nz-button nzType="primary" class="btn" [nzLoading]="loading" (click)="sendRequest()">
+            <span nz-icon nzType="search"></span>
+            <span>Tìm kiếm</span>
+          </button>
+        </div>
+      </nz-card>
+    </form>
+    <!-- end: form-search-component -->
+    <!-- begin: search-component result -->
+    <nz-card class="card card-result" nzTitle="Kết quả tìm kiếm">
+      <nz-table class="custom-nz-table"
+                #rowSelectionTable
+                nzShowSizeChanger
+                [nzShowTotal]="rangeTemplate"
+                [nzData]="listOfData"
+                ngSkipHydration
+                [nzScroll]="{ x: '1200px' }"
+                (nzCurrentPageDataChange)="onCurrentPageDataChange($event)">
+        <thead>
+        <tr style="color: black; background-color: white;" onmouseover="this.style.backgroundColor='#cccccc';"
+            onmouseout="this.style.backgroundColor='#ffffff';">
+          <th
+            [nzChecked]="checked"
+            [nzIndeterminate]="indeterminate"
+            nzLabel="Select all"
+            (nzCheckedChange)="onAllChecked($event)"
+            nzWidth="60px"
+          ></th>
+          <th nzAlign="center" nzWidth="70px">STT</th>
+          <th nzAlign="center" nzWidth="120px">Loại điện</th>
+          <th nzAlign="center" nzWidth="200px">Điện tự động</th>
+          <th nzAlign="center" nzWidth="70px">In</th>
+          <th nzAlign="center" nzWidth="200px">Số tham chiếu</th>
+          <th nzAlign="center" nzWidth="200px">Số tham chiếu SWIFT</th>
+          <th nzAlign="center" nzWidth="150px">Ngày tạo</th>
+          <th nzAlign="center" nzWidth="150px">Ngày giá trị</th>
+          <th nzAlign="center" nzWidth="180px">Mã nước nhân</th>
+          <th nzAlign="center" nzRight nzWidth="110px">Chức năng</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let data of rowSelectionTable.data">
+          <td
+            [nzChecked]="setOfCheckedId.has(data.id)"
+            [nzDisabled]="data.disabled"
+            [nzLabel]="data.so_tham_chieu"
+            nzAlign="center"
+            (nzCheckedChange)="onItemChecked(data.id, $event)"
+          ></td>
+          <td nzAlign="center" nzWidth="60px">{{ data.id }}</td>
+          <td nzAlign="center">{{ data.loai_dien }}</td>
+          <td nzAlign="center">{{ data.dien_tu_dong }}</td>
+          <td nzAlign="center">{{ data.in }}</td>
+          <td nzAlign="center">{{ data.so_tham_chieu }}</td>
+          <td nzAlign="center">{{ data.ngay_tao }}</td>
+          <td nzAlign="center">{{ data.ngay_gia_tri }}</td>
+          <td nzAlign="center">{{ data.so_tien }}</td>
+          <td nzAlign="center">{{ data.ma_nuoc_nhan }}</td>
+          <td nzRight>
+            <div nz-flex nzJustify="space-between" class="box-action">
+              <a href="javascript:void(0)">
+                <span nz-icon nzType="edit" nzTheme="outline" class="action-icon"></span>
+              </a>
+              <a href="javascript:void(0)">
+                <span nz-icon nzType="eye" nzTheme="outline" class="action-icon"></span>
+              </a>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+      <ng-template #rangeTemplate let-range="range" let-total>
+        <div class="total">
+          <span>Tổng số tiền: {{ setOfCheckedId.size }}</span>
+          <span>Tổng số món: {{ setOfCheckedId.size }}</span>
+        </div>
+        {{ range[0] }}-{{ range[1] }} trên {{ total }} giao dịch
+      </ng-template>
+    </nz-card>
+    <!-- end: search-component result -->
+  </nz-content>
+  <!-- end: content -->
+</nz-layout>
